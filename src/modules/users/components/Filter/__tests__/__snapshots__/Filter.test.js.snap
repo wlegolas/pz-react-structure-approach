@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Filter /> render() should render the component 1`] = `
+<div
+  className="pz-search"
+>
+  <input
+    onKeyUp={[MockFunction]}
+    placeholder="Fill the github user and press enter to search"
+    type="text"
+  />
+</div>
+`;
