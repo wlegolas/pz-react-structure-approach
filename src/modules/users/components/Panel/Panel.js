@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Search, UserInfo } from './components'
+import { Search, UserInfo } from '../'
 
 const Panel = ({ userInfo, onSearch }) => (
   <div className="pz-user-panel">
