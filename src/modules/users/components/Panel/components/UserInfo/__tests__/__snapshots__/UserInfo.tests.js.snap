@@ -1,7 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<UserInfo /> render() should render the component 1`] = `
-<UserInfo>
+<UserInfo
+  userInfo={
+    Object {
+      "avatarUrl": "https://avatars2.githubusercontent.com/u/698363?v=4",
+      "name": "Legolas",
+      "totalFollowers": 2,
+      "totalFollowing": 5,
+    }
+  }
+>
   <div
     className="pz-user-container"
   >
@@ -20,17 +29,19 @@ exports[`<UserInfo /> render() should render the component 1`] = `
         className="pz-box pz-right-box"
       >
         <h1>
-          Weslley Alves de Oliveira
+          Legolas
         </h1>
         <p
           className="pz-label"
         >
-          Following: 1
+          Following: 
+          5
         </p>
         <p
           className="pz-label"
         >
-          Followers: 2
+          Followers: 
+          2
         </p>
       </div>
     </div>
