@@ -6,7 +6,14 @@ describe('<Panel />', () => {
   let wrapper
 
   beforeAll(() => {
-    wrapper = mount(<Panel />)
+    const userInfo = {
+      avatarUrl: 'https://avatars2.githubusercontent.com/u/698363?v=4',
+      name: 'Weslley Alves de Oliveira',
+      totalFollowing: 10,
+      totalFollowers: 5
+    }
+
+    wrapper = mount(<Panel userInfo={userInfo} />)
   })
 
   describe('render()', () => {
