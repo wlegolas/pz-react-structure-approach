@@ -6,7 +6,7 @@ describe('<Panel />', () => {
   let wrapper
 
   beforeAll(() => {
-    wrapper = shallow(<Panel />)
+    wrapper = mount(<Panel />)
   })
 
   describe('render()', () => {

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Filter /> render() should render the component 1`] = `
+exports[`<Search /> render() should render the component 1`] = `
 <div
   className="pz-search"
 >

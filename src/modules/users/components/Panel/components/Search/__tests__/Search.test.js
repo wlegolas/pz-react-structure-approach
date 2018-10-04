@@ -1,14 +1,14 @@
 import chai from 'chai'
 import toJson from 'enzyme-to-json'
 import React from 'react'
-import Filter from '../Filter'
+import Search from '../Search'
 
-describe('<Filter />', () => {
+describe('<Search />', () => {
   let wrapper
 
   beforeAll(() => {
     const handleKeyUp = jest.fn()
-    wrapper = shallow(<Filter onKeyUp={handleKeyUp} />)
+    wrapper = shallow(<Search onKeyUp={handleKeyUp} />)
   })
 
   describe('render()', () => {
@@ -36,7 +36,7 @@ describe('<Filter />', () => {
   describe('onKeyUp', () => {
     it('should call the function when event "keyup" is fired', () => {
       const handleKeyUp = chai.spy()
-      wrapper = shallow(<Filter onKeyUp={handleKeyUp} />)
+      wrapper = shallow(<Search onKeyUp={handleKeyUp} />)
 
       wrapper.find('input').simulate('keyup')
 
@@ -45,7 +45,7 @@ describe('<Filter />', () => {
 
     it('should not call the functions when event "keydown" is fired', () => {
       const handleKeDown = chai.spy()
-      wrapper = shallow(<Filter onKeyUp={handleKeDown} />)
+      wrapper = shallow(<Search onKeyUp={handleKeDown} />)
 
       wrapper.find('input').simulate('keydwon')
 

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-const Filter = ({ onKeyUp }) => {
+const Search = ({ onKeyUp }) => {
   return (
     <div className="pz-search">
       <input
@@ -13,8 +13,8 @@ const Filter = ({ onKeyUp }) => {
   )
 }
 
-Filter.propTypes = {
+Search.propTypes = {
   onKeyUp: PropTypes.func.isRequired
 }
 
-export default Filter
+export default Search

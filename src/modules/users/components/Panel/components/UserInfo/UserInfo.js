@@ -1,9 +1,7 @@
 import React from 'react'
-import { Search } from './components'
 
-const Panel = () => (
-  <div className="pz-user-panel">
-    <Search onKeyUp={() => {}} />
+const UserInfo = () => {
+  return (
     <div className="pz-user-container">
       <div className="pz-user-info">
         <div className="pz-box pz-left-box">
@@ -19,7 +17,7 @@ const Panel = () => (
         </div>
       </div>
     </div>
-  </div>
-)
+  )
+}
 
-export default Panel
+export default UserInfo
