@@ -7,8 +7,8 @@ describe('<Search />', () => {
   let wrapper
 
   beforeAll(() => {
-    const handleKeyUp = jest.fn()
-    wrapper = shallow(<Search onKeyUp={handleKeyUp} />)
+    const onSearch = jest.fn()
+    wrapper = shallow(<Search onSearch={onSearch} />)
   })
 
   describe('render()', () => {
@@ -33,21 +33,29 @@ describe('<Search />', () => {
     })
   })
 
-  describe('onKeyUp', () => {
-    it('should call the function when event "keyup" is fired', () => {
-      const handleKeyUp = chai.spy()
-      wrapper = shallow(<Search onKeyUp={handleKeyUp} />)
+  describe('prop onSearch', () => {
+    const eventData = {
+      keyCode: 13,
+      target: {
+        value: 'wlegolas'
+      }
+    }
 
-      wrapper.find('input').simulate('keyup')
+    it('should call the function when event "keyup" is fired by ENTER key', () => {
+      const onSearch = chai.spy()
 
-      expect(handleKeyUp).to.have.been.called.exactly(1)
+      wrapper = shallow(<Search onSearch={onSearch} />)
+
+      wrapper.find('input').simulate('keyup', eventData)
+
+      expect(onSearch).to.have.been.called.exactly(1)
     })
 
     it('should not call the functions when event "keydown" is fired', () => {
       const handleKeDown = chai.spy()
-      wrapper = shallow(<Search onKeyUp={handleKeDown} />)
+      wrapper = shallow(<Search onSearch={handleKeDown} />)
 
-      wrapper.find('input').simulate('keydwon')
+      wrapper.find('input').simulate('keydwon', eventData)
 
       expect(handleKeDown).to.have.been.called.exactly(0)
     })

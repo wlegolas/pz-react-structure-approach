@@ -2,6 +2,7 @@
 
 exports[`<Panel /> render() should render the component 1`] = `
 <Panel
+  onSearch={[MockFunction]}
   userInfo={
     Object {
       "avatarUrl": "https://avatars2.githubusercontent.com/u/698363?v=4",
@@ -15,7 +16,7 @@ exports[`<Panel /> render() should render the component 1`] = `
     className="pz-user-panel"
   >
     <Search
-      onKeyUp={[Function]}
+      onSearch={[MockFunction]}
     >
       <div
         className="pz-search"

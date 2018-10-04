@@ -2,15 +2,16 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { Search, UserInfo } from './components'
 
-const Panel = ({ userInfo }) => (
+const Panel = ({ userInfo, onSearch }) => (
   <div className="pz-user-panel">
-    <Search onKeyUp={() => {}} />
+    <Search onSearch={onSearch} />
     <UserInfo userInfo={userInfo} />
   </div>
 )
 
 Panel.propTypes = {
-  userInfo: PropTypes.object.isRequired
+  userInfo: PropTypes.object.isRequired,
+  onSearch: PropTypes.func.isRequired
 }
 
 export default Panel

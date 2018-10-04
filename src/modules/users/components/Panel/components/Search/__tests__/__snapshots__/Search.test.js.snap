@@ -5,7 +5,7 @@ exports[`<Search /> render() should render the component 1`] = `
   className="pz-search"
 >
   <input
-    onKeyUp={[MockFunction]}
+    onKeyUp={[Function]}
     placeholder="Fill the github user and press enter to search"
     type="text"
   />

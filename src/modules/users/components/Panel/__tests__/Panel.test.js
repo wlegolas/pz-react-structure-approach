@@ -6,6 +6,7 @@ describe('<Panel />', () => {
   let wrapper
 
   beforeAll(() => {
+    const onSearch = jest.fn()
     const userInfo = {
       avatarUrl: 'https://avatars2.githubusercontent.com/u/698363?v=4',
       name: 'Weslley Alves de Oliveira',
@@ -13,7 +14,7 @@ describe('<Panel />', () => {
       totalFollowers: 5
     }
 
-    wrapper = mount(<Panel userInfo={userInfo} />)
+    wrapper = mount(<Panel userInfo={userInfo} onSearch={onSearch} />)
   })
 
   describe('render()', () => {
