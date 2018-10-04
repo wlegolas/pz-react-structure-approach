@@ -34,6 +34,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-jest-snapshot": "^2.0.0",
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
     "enzyme-to-json": "^3.3.4",
