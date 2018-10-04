@@ -11,17 +11,17 @@ describe('<Panel />', () => {
 
   describe('render()', () => {
     it('should render the component', () => {
-      expect(toJson(wrapper)).toMatchSnapshot()
+      expect(toJson(wrapper)).to.matchSnapshot()
     })
   })
 
   describe('verify the structure', () => {
     it('should have a section with filter component', () => {
-      expect(wrapper.find('.pz-search')).toHaveLength(1)
+      expect(wrapper.find('.pz-search')).to.have.lengthOf(1)
     })
 
     it('should have a section with user info', () => {
-      expect(wrapper.find('.pz-user-container')).toHaveLength(1)
+      expect(wrapper.find('.pz-user-container')).to.have.lengthOf(1)
     })
   })
 })

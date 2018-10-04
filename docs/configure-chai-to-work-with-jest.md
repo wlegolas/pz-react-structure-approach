@@ -5,7 +5,7 @@
 - Chai dependencies
 
 ```
-yarn add --dev chai chai-jest-snapshot
+yarn add --dev chai chai-jest-snapshot chai-spies
 ```
 
 ## Configure Chai
@@ -13,14 +13,16 @@ yarn add --dev chai chai-jest-snapshot
 - Add in the test setup file **src/setupTests.js** the code below:
 
 ```
-import chai from 'chai';
-import chaiJestSnapshot from "chai-jest-snapshot";
+import chai from 'chai'
+import chaiJestSnapshot from "chai-jest-snapshot"
+import spies from 'chai-spies'
 ```
 
 - In the file **src/setupTests.js** put the code below to configure Chai to use the lib to compare the snapshots like Jest does:
 
 ```
-chai.use(chaiJestSnapshot);
+chai.use(chaiJestSnapshot)
+chai.use(spies)
 ```
 
 - In the file **src/setupTests.js** put the code below to configure Chai _expect_ to be the default expect in the test files:
@@ -29,6 +31,6 @@ chai.use(chaiJestSnapshot);
 
 ```
 // Configure Chai
-global.jestExpect = global.expect;
-global.expect = chai.expect;
+global.jestExpect = global.expect
+global.expect = chai.expect
 ```

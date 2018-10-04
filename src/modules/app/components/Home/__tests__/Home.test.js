@@ -11,7 +11,7 @@ describe('<Home />', () => {
         </Home>
       )
 
-      expect(toJson(wrapper)).toMatchSnapshot()
+      expect(toJson(wrapper)).to.matchSnapshot()
     })
 
     it('should render a nested component', () => {
@@ -26,7 +26,7 @@ describe('<Home />', () => {
         </Home>
       )
 
-      expect(wrapper.find('.nested-cmp')).toHaveLength(1)
+      expect(wrapper.find('.nested-cmp')).to.have.lengthOf(1)
     })
   })
 })
