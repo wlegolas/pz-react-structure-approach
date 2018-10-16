@@ -8,7 +8,7 @@ describe('<Search />', () => {
 
   beforeAll(() => {
     const onSearch = jest.fn()
-    wrapper = shallow(<Search onSearch={onSearch} />)
+    wrapper = mount(<Search onSearch={onSearch} />)
   })
 
   describe('render()', () => {
@@ -40,6 +40,14 @@ describe('<Search />', () => {
         value: 'wlegolas'
       }
     }
+
+    it('should fire click', () => {
+      const spy = chai.spy(wrapper.instance(), 'handleClick')
+      wrapper.find('button').simulate('click')
+      console.log('**** => ', spy.call)
+
+      expect(spy).to.have.been.called.exactly(1)
+    })
 
     it('should call the function when event "keyup" is fired by ENTER key', () => {
       const onSearch = chai.spy()

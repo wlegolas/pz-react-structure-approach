@@ -6,6 +6,10 @@ class Search extends React.Component {
     onSearch: PropTypes.func.isRequired
   }
 
+  handleClick = event => {
+    console.log('***** Foi')
+  }
+
   handleKeyUp = event => {
     const keyCode = event.which || event.keyCode
     const ENTER = 13
@@ -23,6 +27,9 @@ class Search extends React.Component {
           placeholder="Fill the github user and press enter to search"
           onKeyUp={this.handleKeyUp}
         />
+        <button type="button" onClick={this.handleClick}>
+          Teste
+        </button>
       </div>
     )
   }

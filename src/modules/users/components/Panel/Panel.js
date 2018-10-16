@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Search, UserInfo } from '../'
+import { connect } from 'react-redux'
+import { Search, UserInfo } from '../index'
 
 const Panel = ({ userInfo, onSearch }) => (
   <div className="pz-user-panel">
@@ -14,4 +15,8 @@ Panel.propTypes = {
   onSearch: PropTypes.func.isRequired
 }
 
-export default Panel
+const mapStateToProps = ({ users }) => ({
+  userInfo: users.userInfo
+})
+
+export default connect(mapStateToProps)(Panel)

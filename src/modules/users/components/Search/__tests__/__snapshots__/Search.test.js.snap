@@ -1,13 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Search /> render() should render the component 1`] = `
-<div
-  className="pz-search"
+<Search
+  onSearch={[MockFunction]}
 >
-  <input
-    onKeyUp={[Function]}
-    placeholder="Fill the github user and press enter to search"
-    type="text"
-  />
-</div>
+  <div
+    className="pz-search"
+  >
+    <input
+      onKeyUp={[Function]}
+      placeholder="Fill the github user and press enter to search"
+      type="text"
+    />
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Teste
+    </button>
+  </div>
+</Search>
 `;
