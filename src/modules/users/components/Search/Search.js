@@ -27,9 +27,6 @@ class Search extends React.Component {
           placeholder="Fill the github user and press enter to search"
           onKeyUp={this.handleKeyUp}
         />
-        <button type="button" onClick={this.handleClick}>
-          Teste
-        </button>
       </div>
     )
   }

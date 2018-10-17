@@ -4,10 +4,10 @@ const getInitialState = () => ({
   userInfo: {}
 })
 
-const user = (state = getInitialState(), action) => {
-  switch (action.type) {
+const user = (state = getInitialState(), { type, payload }) => {
+  switch (type) {
     case actionTypes.SEARCH:
-      return { userInfo: { name: 'By reducer' } }
+      return { userInfo: { name: payload.text } }
     default:
       return state
   }
