@@ -7,12 +7,12 @@ import { Search, UserInfo } from '../index'
 const Panel = ({ userInfo, onSearch }) => (
   <div className="pz-user-panel">
     <Search onSearch={onSearch} />
-    <UserInfo userInfo={userInfo} />
+    {userInfo && <UserInfo userInfo={userInfo} />}
   </div>
 )
 
 Panel.propTypes = {
-  userInfo: PropTypes.object.isRequired,
+  userInfo: PropTypes.object,
   onSearch: PropTypes.func.isRequired
 }
 
